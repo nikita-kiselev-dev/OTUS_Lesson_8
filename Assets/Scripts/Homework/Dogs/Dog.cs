@@ -15,6 +15,7 @@ namespace Homework.Dogs
     {
         public abstract void ChangeColor();
         public abstract void SetMood();
+        public abstract void SetMove();
 
         private SpriteRenderer _spriteRenderer;
 
@@ -26,8 +27,8 @@ namespace Homework.Dogs
         protected void Start()
         {
             SetMood();
+            SetMove();
             
-            Move = new Walk(this, -4, 4, 1);
             Sound = new Bark(this);
 
             InputController.Instance.OnColorChanged += OnColorChanged;

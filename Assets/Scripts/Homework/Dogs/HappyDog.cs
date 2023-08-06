@@ -1,4 +1,5 @@
 using Homework.Common;
+using Homework.Movement;
 using UnityEngine;
 
 namespace Homework.Dogs
@@ -15,6 +16,11 @@ namespace Homework.Dogs
         public override void SetMood()
         {
             currentMood = MoodStates.MoodState.Happy;
+        }
+
+        public override void SetMove()
+        {
+            Move = new Run(this, -4, 4, 1, Random.Range(0.3f, 2.5f));
         }
     }
 }
