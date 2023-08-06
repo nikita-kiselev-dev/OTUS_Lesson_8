@@ -31,8 +31,6 @@ namespace Homework.Movement
 
         public override void Execute()
         {
-            Debug.Log(_speed);
-            
             var newPosition = Owner.transform.position;
 
             _angle += Time.deltaTime;
