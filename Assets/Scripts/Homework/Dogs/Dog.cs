@@ -14,12 +14,12 @@ namespace Homework.Dogs
     public abstract class Dog : MonoBehaviour, IColorChangeable
     {
         public abstract void ChangeColor();
-        public abstract void SetMood();
         public abstract void SetMove();
+        public abstract void SetMood();
 
         private SpriteRenderer _spriteRenderer;
 
-        protected MoodStates.MoodState currentMood;
+        protected MoodStates.MoodState currentMood = MoodStates.MoodState.Default;
         
         protected Move Move;
         protected Sound.Sound Sound;

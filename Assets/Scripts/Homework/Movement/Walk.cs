@@ -35,10 +35,5 @@ namespace Homework.Movement
                 currentDirection = MoveDirection.Forward;
             }
         }
-
-        public override void UpdateDirection()
-        {
-            newDirection = currentDirection;
-        }
     }
 }

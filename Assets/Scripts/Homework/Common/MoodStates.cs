@@ -4,6 +4,7 @@ namespace Homework.Common
     {
         public enum MoodState
         {
+            Default,
             Happy,
             Sad
         }

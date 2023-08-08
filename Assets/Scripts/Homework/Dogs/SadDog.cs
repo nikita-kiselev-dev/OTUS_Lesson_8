@@ -12,6 +12,7 @@ namespace Homework.Dogs
      */
     public class SadDog : Dog
     {
+        private MoodStates.MoodState currentMood = MoodStates.MoodState.Sad;
         public override void ChangeColor()
         {
             var random = new System.Random();
@@ -19,14 +20,14 @@ namespace Homework.Dogs
             GetSpriteRenderer().color = new Color(0.2f, 0.2f, 0.7f + blue / 2);
         }
 
-        public override void SetMood()
-        {
-            currentMood = MoodStates.MoodState.Sad;
-        }
-
         public override void SetMove()
         {
             Move = new Walk(this, -4, 4, 1);
+        }
+
+        public override void SetMood()
+        {
+            base.currentMood = currentMood;
         }
     }
 }

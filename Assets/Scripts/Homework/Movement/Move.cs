@@ -25,6 +25,10 @@ namespace Homework.Movement
         }
         
         public abstract void Execute();
-        public abstract void UpdateDirection();
+
+        public void UpdateDirection()
+        {
+            newDirection = currentDirection;
+        }
     }
 }
